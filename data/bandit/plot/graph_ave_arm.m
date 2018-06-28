@@ -1,7 +1,7 @@
-means = csvread('mean_by_arm2',1,0);
+means = csvread('mean_by_arm',1,0);
 means = means(:,[1 6 5 7 3 4 8]);
 
-errs = csvread('error_by_arm2',1,0);
+errs = csvread('error_by_arm',1,0);
 errs = errs(:,[1 6 5 7 3 4 8]);
 
 fig = figure();
@@ -26,7 +26,7 @@ myColorOrder = [[0.9290 0.6940 0.1250];[0.6350 0.0780 0.1840];[0.4940 0.1840 0.5
 set(gca, 'ColorOrder', myColorOrder, 'NextPlot', 'replacechildren');
 ylim([0,1]);
 
-lg = legend('Full Deliberation','DQN','Meta-greedy', 'Metalevel RL', 'Blinkered', 'Optimal','AutoUpdate','off');
+lg = legend('Full Deliberation','DQN','Meta-greedy', 'BMPS', 'Blinkered', 'Optimal','AutoUpdate','off');
 lg.Location = 'NorthWest';
 % lg.Orientation = 'Horizontal';
 
