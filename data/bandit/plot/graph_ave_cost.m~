@@ -19,10 +19,10 @@ end
 
 % X and Y labels
 xlabel ('Cost of Computation','FontSize',30);
-ylabel ('Metareasoning Performance','FontSize',30);
+ylabel ('Metareasoning Performance','FontSize',);
 ylim([0.4,0.8]);
 box on
-set(gca,'FontSize',24,'XScale','log')
+set(gca,'FontSize',16,'XScale','log')
 
 lg = legend('Optimal', 'Blinkered', 'BMPS', 'Full Deliberation', 'Meta-greedy','DQN');
 lg.Location = 'Northeast';

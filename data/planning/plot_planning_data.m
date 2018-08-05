@@ -17,7 +17,7 @@ ax = axes;
 
 hb = barwitherr(ci_depth(:,included+1),means_depth(:,1),means_depth(:,included+1)); hold on;
 
-myColorOrder = [[0.6350 0.0780 0.1840];[0.8500 0.3250 0.0980];[0 0.4470 0.7410];[0.4660 0.6740 0.1880];[0.9290 0.6940 0.1250];[0.4940 0.1840 0.5560]];
+myColorOrder = [[0.4940 0.1840 0.5560];[0.8500 0.3250 0.0980];[0 0.4470 0.7410];[0.4660 0.6740 0.1880];[0.9290 0.6940 0.1250];[0.4940 0.1840 0.5560]];
 set(gca, 'ColorOrder', myColorOrder, 'NextPlot', 'replacechildren');
 
 % X and Y labels
