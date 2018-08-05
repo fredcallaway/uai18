@@ -17,16 +17,17 @@ ax = axes;
 hb = bar(means(:,1),means(:,2:end)); hold on;
 
 % X and Y labels
-xlabel ('Number of Options');
-ylabel ('Metareasoning Performance');
+xlabel ('Number of Options','FontSize',30);
+ylabel ('Metareasoning Performance','FontSize',30);
 
 xt = get(gca, 'XTick');
-set(gca, 'FontSize', 16)
+set(gca, 'FontSize', 24)
 myColorOrder = [[0.9290 0.6940 0.1250];[0.6350 0.0780 0.1840];[0.4940 0.1840 0.5560];[0 0.4470 0.7410];[0.8500 0.3250 0.0980];[0.4660 0.6740 0.1880]];
 set(gca, 'ColorOrder', myColorOrder, 'NextPlot', 'replacechildren');
 ylim([0,1]);
 
-lg = legend('Full Deliberation','DQN','Meta-greedy', 'BMPS', 'Blinkered', 'Optimal','AutoUpdate','off');
+%lg = legend('Full Deliberation','DQN','Meta-greedy', 'BMPS', 'Blinkered', 'Optimal','AutoUpdate','off');
+lg = columnlegend(2,{'Full Deliberation','DQN','Meta-greedy', 'BMPS', 'Blinkered', 'Optimal'})
 lg.Location = 'NorthWest';
 % lg.Orientation = 'Horizontal';
 
